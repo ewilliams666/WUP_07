@@ -53,9 +53,6 @@ barchartGC(~result+ sex ,data=kRdata, type="percent")
 Based upon the graphs above it seems like sex may play a role in whether or not someone is more likely to die from covid. It both graphs more men died than women.
 
 
-
-
-  
 ## Numerical results
 
 
@@ -78,9 +75,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-
-
-
+Because the p-value for the chi-squared test is below 0.05 it means that we has enough evidence to reject the null hypothesis. The same goes for the fisher exact test. The p-value for that one is 0.0000000004. This means that sex does have an affect on whether or not someone is more likely to die from covid. 
 
 
 
