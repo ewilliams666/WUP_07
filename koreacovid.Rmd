@@ -72,6 +72,15 @@ Here we see that on average, men are more likely to die from covid, with 64 case
 
 ## Inferential results 
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+
+
+
 
 
 
