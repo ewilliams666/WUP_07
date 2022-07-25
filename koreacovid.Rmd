@@ -24,7 +24,11 @@ state of a patient must be died or alive - we adjust that as well
   
 # Question 1 - Is dying independent of sex
 
+$H_0$: Sex has no affect on death 
 
+$H_A$: Dying is dependent on sex 
+
+Since both variables are categorical, we will be using CAT-CAT. We will perform a chi-squared test as well as a fisher exact test.
 
 
 Table of patients:
@@ -38,16 +42,32 @@ with(kRdata, table(Sex, result))
 
 ## We create two bar charts - one based on frequency and the other on percent, use ggplot commands to do this
 
-`
+
+```{r}
+barchartGC(~result+sex,data=kRdata)
+barchartGC(~result+ sex ,data=kRdata, type="percent")
+
+```
 
   
-
+Based upon the graphs above it seems like sex may play a role in whether or not someone is more likely to die from covid. It both graphs more men died than women.
 
 
 
 
   
 ## Numerical results
+
+
+```{r}
+table1 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+Here we see that on average, men are more likely to die from covid, with 64 cases ending in death. As far as female cases, only 36 ended in death. We do not currently have enough evidence to reject the null hypothesis but it looks like death is dependant on sex. 
+
 
 
 ## Inferential results 
