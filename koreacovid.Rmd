@@ -26,7 +26,7 @@ state of a patient must be died or alive - we adjust that as well
 
 $H_0$: Sex has no affect on death 
 
-$H_A$: Dying is dependent on sex 
+$H_A$: Sex does have an affect on death 
 
 Since both variables are categorical, we will be using CAT-CAT. We will perform a chi-squared test as well as a fisher exact test.
 
@@ -50,7 +50,7 @@ barchartGC(~result+ sex ,data=kRdata, type="percent")
 ```
 
   
-Based upon the graphs above it seems like sex may play a role in whether or not someone is more likely to die from covid. It both graphs more men died than women.
+Based upon the graphs above it seems like sex may play a role in whether or not someone is more likely to die from covid. In both graphs more men died than women.
 
 
 ## Numerical results
@@ -80,4 +80,4 @@ Because the p-value for the chi-squared test is below 0.05 it means that we has 
 
 
 ## Conclusions
-
+Based upon the evidence and graphs above it seems that death does play a role in whether or not someone is more likely to die from covid. It seems that in this case men are more likely to die than women. Because of this it means we reject the null hypothesis. 
